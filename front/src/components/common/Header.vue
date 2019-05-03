@@ -12,18 +12,19 @@
           <el-col :span="3">
             <el-menu
               class="el-menu-demo"
-              @select="handleSelect"
+              router
               mode="horizontal"
               background-color="#000"
               text-color="#fff"
               active-text-color="#fff">
-              <el-submenu index="2">
+              <el-submenu index="1">
                 <template slot="title"><i class="el-icon-user-solid" style="font-size:25px;"></i></template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
+                <el-menu-item index="/usercenter">我的订单</el-menu-item>
+                <el-menu-item index="1-2">收货地址</el-menu-item>
+                <hr style="width:90%;">
+                <el-menu-item index="1-3">退出登录</el-menu-item>
               </el-submenu>
-              <el-menu-item index="4" style="border-bottom-color:#000;"><i class="el-icon-shopping-cart-2" style="font-size:25px;"></i></el-menu-item>
+              <el-menu-item index="2" style="border-bottom-color:#000;"><i class="el-icon-shopping-cart-2" style="font-size:25px;"></i></el-menu-item>
             </el-menu>
           </el-col>
         </el-row>
@@ -40,11 +41,8 @@ export default {
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
     goIndex(){
-      console.log('index')
+      this.$router.push('/index')
     }
   }
 }

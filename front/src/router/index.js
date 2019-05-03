@@ -4,6 +4,8 @@ import Index from '@/components/common/Index'
 import BookDetail from '@/components/page/BookDetail'
 import BookList from '@/components/page/BookList'
 import UserCenter from '@/components/page/UserCenter'
+import Login from '@/components/page/Login'
+import Register from '@/components/page/Register'
 
 Vue.use(Router)
 
@@ -33,6 +35,16 @@ export default new Router({
           component: UserCenter
         }
       ]
+    },
+    {
+      path: '/register',
+      name: '注册',
+      component: Register
+    },
+    {
+      path: '/login',
+      name: '登录',
+      component: Login
     }
   ]
 })
